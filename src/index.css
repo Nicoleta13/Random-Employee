@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.container {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.container h4 {
+  text-transform: uppercase;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1 100%;
+}
+
+.image-container {
+  border: 2px solid #d9d9d9;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 15px 15px;
+  padding: 30px 10px;
+  width: 150px;
+  height: 190px;
+}
+
+.image-container:hover {
+  background-color: rgba(212, 212, 212, 0.38);
+}
+
+.large-img {
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.myBtn {
+  background-color: white;
+  color: rgb(158, 10, 30);
+  font-weight: bold;
+  border: green 2px solid;
+}
+
+/* yghjgedhvwegdhewhgdvh */
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 0.8em;
+}
+
+.name,
+.city,
+.address,
+.birthday {
+  text-transform: capitalize;
+}
+
+/*MODAL  */
+.overlay-modal {
+  position: absolute;
+  z-index: 99;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.36);
+  display: none;
+}
+
+.popup-modal {
+  position: relative;
+  z-index: 100;
+  background-color: white;
+  margin: 0 auto;
+  width: 350px;
+  height: 430px;
+  text-align: center;
+  font-weight: normal;
+  border-radius: 5px;
+  border: 5px solid lightblue;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.employee-card,
+.extra-info {
+  font-size: 1em;
+  line-height: 2;
+}
+
+.nav {
+  display: block;
+}
+.picture {
+  width: 35%;
+  margin: 0 auto;
+}
+
+hr {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.closeBtn {
+  position: absolute;
+
+  top: 1vw;
+  right: 1vw;
+}
+
+.prev,
+.next {
+  position: relative;
+  top: 170px;
+}
+
+.prev {
+  left: -140px;
+}
+
+.next {
+  right: -140px;
+}
+
+.closeBtn:hover,
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+}
