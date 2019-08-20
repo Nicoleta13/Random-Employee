@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CloseButton from "./CloseButton";
 
 class Employees extends Component {
   constructor() {
@@ -16,11 +17,16 @@ class Employees extends Component {
     };
   }
 
+  handleDelete = userId => {
+    const employees = this.state.users.filter(user => user.id !== userId);
+    this.setState({ users: employees });
+  };
+
   //lifecycle methods including “Will” are called before something happens and then pull the data
   //Lifecycle methods including “Did” are called after something happens
   componentWillMount() {
     //fetch + API call
-    fetch("https://randomuser.me/api/?results=60")
+    fetch("https://randomuser.me/api/?results=10")
       // how the data is formated
       .then(response => response.json())
 
@@ -34,7 +40,12 @@ class Employees extends Component {
                 // onClick={() => this.handleClick(i)}
                 className="image-container"
               >
-                <button className="delBtn">X</button>
+                {/* <button className="delBtn">X</button> */}
+                <CloseButton
+                  // key={user.id}
+                  // value={user.value}
+                  onDelete={this.handleDelete}
+                />
                 <img
                   className="large-img"
                   src={user.picture.large}
@@ -67,11 +78,7 @@ class Employees extends Component {
     return (
       <div className="container">
         <h4>Employee Directory</h4>
-        <div className="grid">
-          {/* here it is used the new state of that it was defined in the
-         componentWillMount lifecycle method */}
-          {this.state.users}
-        </div>
+        <div className="grid">{this.state.users}</div>
       </div>
     );
   }

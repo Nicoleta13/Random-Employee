@@ -1,14 +1,22 @@
-import React, { Component } from 'react';
-import close from '.close.png';
+import React, { Component } from "react";
 
 class CloseButton extends Component {
-    state = {  }
+  state = {
+    count: this.props.value
+  };
 
-
-    render() { 
-        return (  );
-    }
+  render() {
+    return (
+      <div>
+        <button
+          onClick={() => this.props.onDelete(this.props.id)}
+          className="delBtn"
+        >
+          X
+        </button>
+      </div>
+    );
+  }
 }
- 
-export default CloseButton;
 
+export default CloseButton;
