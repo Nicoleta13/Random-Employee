@@ -34,6 +34,7 @@ class Employees extends Component {
                 // onClick={() => this.handleClick(i)}
                 className="image-container"
               >
+                <button className="delBtn">X</button>
                 <img
                   className="large-img"
                   src={user.picture.large}
@@ -42,6 +43,7 @@ class Employees extends Component {
                 <div className="name">
                   {user.name.first} {user.name.last}
                 </div>
+
                 <button
                   className="myBtn"
                   onClick={() => alert("Employee's details are displayed!")}
