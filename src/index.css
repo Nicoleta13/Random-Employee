@@ -49,6 +49,7 @@ body {
 .name {
   font-weight: bold;
   font-size: 0.9em;
+  text-transform: capitalize;
 }
 
 .myBtn {

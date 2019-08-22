@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
-class CloseButton extends Component {
-  state = {
-    count: this.props.value
-  };
-
+class DeleteEmployee extends Component {
   render() {
     return (
       <div>
@@ -19,4 +15,4 @@ class CloseButton extends Component {
   }
 }
 
-export default CloseButton;
+export default DeleteEmployee;
