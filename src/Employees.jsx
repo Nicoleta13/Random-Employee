@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DeleteEmployee from "./DeleteEmployee";
+import DeleteButton from "./DeleteButton";
 
 class Employees extends Component {
   constructor() {
@@ -45,7 +45,7 @@ class Employees extends Component {
           {employees.map(employee => (
             <div key={employee.id}>
               <div className="image-container">
-                <DeleteEmployee
+                <DeleteButton
                   key={employee.id}
                   onDelete={this.handleDelete}
                   id={employee.id}
